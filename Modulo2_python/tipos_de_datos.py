@@ -24,3 +24,15 @@ a=10
 a=10+1
 
 print("El valor de a es :", a)
+
+#clases y objetos en python
+
+#===OBJETOS=== 
+
+nombre_edwin= "Edwin"
+print(type(nombre_edwin))
+
+numero_estudiantes= 26
+print(type(numero_estudiantes))
+
+dinero_ahorrado=1200000
