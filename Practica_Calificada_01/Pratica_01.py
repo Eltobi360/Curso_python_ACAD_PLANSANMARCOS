@@ -1,11 +1,11 @@
 empleados=[]
 
 salarios_por_trabajo = {
-    "Limpieza": 1000,
-    "Mesero": 2000,
-    "Cajero": 3000,
-    "Vigilante": 4000,
-    "Gerente": 5000
+    "Limpieza": 1025,
+    "Mesero": 1500,
+    "Cajero": 1500,
+    "Vigilante": 1400,
+    "Gerente": 2500
 }
 
     
