@@ -24,7 +24,7 @@ def ingresar_empleado():
     print("5.Gerente")
     opcion_trabajo= input("Seleccione una opcion -> 'Mesero': ")
 
-    if opcion_trabajo in salarios_por_trabajo.keys():
+    if opcion_trabajo in salarios_por_trabajo:
         salario= salarios_por_trabajo[opcion_trabajo]
         empleado = {"id": id_empleado, "nombre": nombre, "dni": dni, "telefono": telefono, "tiempo": tiempo, "trabajo": opcion_trabajo, "salario": salario}
         empleados.append(empleado)
@@ -60,7 +60,7 @@ def main():
         print ("=================================")
         print ("1. Ingresasr nuevo empleado")
         print ("2. Mostrar lista de empleados")
-        print ("3. Buscar enmpelado")
+        print ("3. Visualizar informacion de un empleado")
         print ("=================================")
         print ("4. salir")
 
