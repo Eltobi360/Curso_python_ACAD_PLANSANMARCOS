@@ -17,19 +17,20 @@ def ingresar_empleado():
     telefono=input("Ingrtese el telefono del empleado: ")
     tiempo=input("ingrese el teiempo del empleado (meses): ")
     print ("Ingrese el trabajo que realizara: ")
-    print("Limpieza")
-    print("Mesero")
-    print("Cajero")
-    print("Vigilante")
-    print("Gerente")
-    opcion_trabajo= input("Seleccione una opcion:")
+    print("1.Limpieza")
+    print("2.Mesero")
+    print("3.Cajero")
+    print("4.Vigilante")
+    print("5.Gerente")
+    opcion_trabajo= input("Seleccione una opcion -> 'Mesero': ")
 
-    if opcion_trabajo in salarios_por_trabajo:
+    if opcion_trabajo in salarios_por_trabajo.keys():
         salario= salarios_por_trabajo[opcion_trabajo]
         empleado = {"id": id_empleado, "nombre": nombre, "dni": dni, "telefono": telefono, "tiempo": tiempo, "trabajo": opcion_trabajo, "salario": salario}
         empleados.append(empleado)
         print("El empleado a sido ingresado con exito")
-
+    else:
+        print("Ingrese una opcion valida")
     
     
 
@@ -37,9 +38,12 @@ def ingresar_empleado():
 def main():
     
     while True:
+        print ("=================================")
         print ("bienvenidos")
+        print ("=================================")
         print ("1. Ingresasr nuevo empleado")
         print ("2. Mostrar lista de empleados")
+        print ("=================================")
         print ("3. salir")
 
         opcion = input("Seleccione una opcion: ")
