@@ -34,6 +34,23 @@ def ingresar_empleado():
     
     
 
+def buscar_empleado():
+    id_buscar= input("Ingrese el id del empleado: ")
+    empleados_encontrado=None
+
+    for empleado in empleados: 
+        if empleado["id"]== id_buscar:
+            empleados_encontrado=empleado
+            break
+
+    if empleados_encontrado:
+        print("El empleado encontrado: ")
+        print(f"id:{empleado['id']},Nombre: {empleado['nombre']},DNI: {empleado['dni']},Telefono: {empleado['telefono']},tiempo: {empleado['tiempo']},trabajo: {empleado['trabajo']}, salario: {empleado['salario']}")
+    else:
+        print("No se encontro")
+
+
+
 
 def main():
     
@@ -43,8 +60,9 @@ def main():
         print ("=================================")
         print ("1. Ingresasr nuevo empleado")
         print ("2. Mostrar lista de empleados")
+        print ("3. Buscar enmpelado")
         print ("=================================")
-        print ("3. salir")
+        print ("4. salir")
 
         opcion = input("Seleccione una opcion: ")
         if opcion == "1":
@@ -58,6 +76,8 @@ def main():
                     print(f"id:{empleado['id']},Nombre: {empleado['nombre']},DNI: {empleado['dni']},Telefono: {empleado['telefono']},tiempo: {empleado['tiempo']},trabajo: {empleado['trabajo']}, salario: {empleado['salario']}")
                 print()
         elif opcion == "3":
+            buscar_empleado()
+        elif opcion == "4":
             print("Adios")
             break
         else:
